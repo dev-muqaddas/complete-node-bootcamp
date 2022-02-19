@@ -5,7 +5,10 @@ const path = require("path");
 const fs = require("fs");
 
 //reading json data
-const data = fs.readFileSync( path.join(__dirname, "../dev-data/data.json"), "utf8");
+const data = fs.readFileSync(
+  path.join(__dirname, "../dev-data/data.json"),
+  "utf8"
+);
 const dataObj = JSON.parse(data);
 
 const server = http.createServer((req, res) => {
@@ -15,7 +18,8 @@ const server = http.createServer((req, res) => {
     res.end("This is an overview page");
   } else if (pathName === "/product") {
     res.end("This is a product page");
-  } else if (pathName === "/api") {2  
+  } else if (pathName === "/api") {
+    2;
     res.writeHead(200, {
       "content-type": "application/json",
     });

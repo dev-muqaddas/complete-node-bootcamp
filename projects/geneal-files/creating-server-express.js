@@ -31,3 +31,4 @@ app.get('*', function(req, res){
 app.listen(port, () => {
   console.log(`listening to http://localhost:3000`)
 })
+console.log("hello")
